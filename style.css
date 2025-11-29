@@ -1,0 +1,148 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #e3f2fd;
+    color: #000;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(45deg, #0d47a1, #1565c0);
+    color: white;
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.delivery-time {
+    background: #ff9800;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.cart-icon {
+    cursor: pointer;
+    font-size: 24px;
+    position: relative;
+}
+
+#cart-count {
+    background: red;
+    color: white;
+    font-size: 14px;
+    border-radius: 50%;
+    padding: 2px 6px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+
+#menu h2 {
+    text-align: center;
+    color: #0d47a1;
+    margin-top: 20px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.menu-item {
+    background: white;
+    border-radius: 15px;
+    width: 220px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+}
+
+.menu-item img {
+    width: 180px;
+    height: 130px;
+    border-radius: 10px;
+}
+
+.qty-control {
+    margin: 5px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.qty-control button {
+    background: #0d47a1;
+    padding: 2px 8px;
+    color: white;
+    border-radius: 5px;
+}
+
+button {
+    background: #0d47a1;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+button:hover {
+    background: #1565c0;
+}
+
+#cart-panel {
+    position: fixed;
+    top: 60px;
+    right: -400px;
+    width: 350px;
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s;
+    max-height: 90%;
+    overflow-y: auto;
+}
+
+#cart-panel.open {
+    right: 20px;
+}
